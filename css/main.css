@@ -24,11 +24,22 @@ html {
   scroll-behavior: smooth;
 }
 
+:root {
+  /* dark mode - COLOR */
+  --dark: #000;
+  --light: #fff;
+  --light-green: #30fe6c;
+  --lighter-green: #30fe6ad3;
+  --dark-grey: #2e2f34;
+  --light-grey: #34353a;
+  --lighter-grey: "#aaa";
+}
+
 body {
   font-family: "Poppins", sans-serif;
   font-size: 10px;
-  background-color: #000;
-  color: #fff;
+  background-color: var(--dark);
+  color: var(--light);
 }
 
 section {
@@ -47,8 +58,8 @@ section {
 
 .btn {
   display: inline-block;
-  padding: 18px 30px;
-  background-color: #30fe6c;
+  padding: 10px 20px;
+  background-color: var(--light-green);
   color: #000;
   font-size: 1.15rem;
   margin-top: 30px;
@@ -57,7 +68,7 @@ section {
 }
 
 .btn:hover {
-  background-color: #30fe6ad3;
+  background-color: var(--lighter-green);
 }
 
 /* HEADER */
@@ -78,7 +89,11 @@ header {
 header .logo {
   font-family: "Lato", sans-serif;
   font-size: 2rem;
-  color: whitesmoke;
+  color: var(--light);
+}
+
+.menu {
+  display: none;
 }
 
 header nav ul {
@@ -87,16 +102,16 @@ header nav ul {
 }
 
 header nav ul li a {
-  color: #fff;
+  color: var(--light);
   font-size: 1.15rem;
   transition: 0.5s;
 }
 header nav ul li.active a {
-  color: #30fe6c;
+  color: var(--light-green);
 }
 
 header nav ul li:hover a {
-  color: #30fe6c;
+  color: var(--light-green);
 }
 
 /* HOME */
@@ -111,7 +126,7 @@ header nav ul li:hover a {
   width: 350px;
   height: 350px;
   border-radius: 50%;
-  filter: grayscale(100%) drop-shadow(0 0 20px #30fe6c);
+  filter: grayscale(100%) drop-shadow(0 0 20px var(--light-green));
   object-fit: cover;
 }
 
@@ -125,7 +140,7 @@ header nav ul li:hover a {
 #home .content h1 {
   font-size: 5rem;
   font-family: "Lato", sans-serif;
-  color: #30fe6c;
+  color: var(--light-green);
 }
 
 #home .content p {
@@ -136,7 +151,7 @@ header nav ul li:hover a {
 
 /* SERVICES */
 #services {
-  background-color: #2e2f34;
+  background-color: var(--dark-grey);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -159,7 +174,7 @@ header nav ul li:hover a {
   max-width: 700px;
   text-align: center;
   font-size: 1.25rem;
-  color: #aaa;
+  color: var(--lighter-grey);
 }
 
 #services .content {
@@ -172,7 +187,7 @@ header nav ul li:hover a {
 
 #services .content .box {
   padding: 50px;
-  background-color: #34353a;
+  background-color: var(--light-grey);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -181,7 +196,7 @@ header nav ul li:hover a {
 }
 
 #services .content .box:hover {
-  border: 1px solid #30fe6c;
+  border: 1px solid var(--light-green);
 }
 
 #services .content .box h3 {
@@ -189,12 +204,12 @@ header nav ul li:hover a {
 }
 
 #services .content .box:hover h3 {
-  color: #30fe6c;
+  color: var(--light-green);
 }
 
 /* PORTFOLIO */
 #portfolio {
-  background-color: #34353a;
+  background-color: var(--light-grey);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -217,7 +232,7 @@ header nav ul li:hover a {
   max-width: 700px;
   text-align: center;
   font-size: 1.25rem;
-  color: #aaa;
+  color: var(--lighter-grey);
 }
 
 #portfolio .content {
@@ -230,7 +245,7 @@ header nav ul li:hover a {
 
 #portfolio .content .box {
   padding: 100px;
-  background-color: #2e2f34;
+  background-color: var(--dark-grey);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -240,7 +255,7 @@ header nav ul li:hover a {
 
 #portfolio .content .box:hover {
   transform: scale(1.1);
-  border: 1px solid #30fe6c;
+  border: 1px solid var(--light-green);
 }
 
 #portfolio .content .box h3 {
@@ -248,12 +263,12 @@ header nav ul li:hover a {
 }
 
 #portfolio .content .box:hover h3 {
-  color: #30fe6c;
+  color: var(--light-green);
 }
 
 /* CONTACT */
 #contact {
-  background-color: #2e2f34;
+  background-color: var(--dark-grey);
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -289,7 +304,7 @@ header nav ul li:hover a {
 
 #contact .content .box {
   padding: 30px 40px;
-  background-color: #34353a;
+  background-color: var(--light-grey);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -299,35 +314,35 @@ header nav ul li:hover a {
 
 #contact .content .box a {
   font-size: 1.05rem;
-  color: #aaa;
+  color: var(--lighter-grey);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 #contact .content .box:hover {
-  border: 1px solid #30fe6c;
+  border: 1px solid var(--light-green);
 }
 
 #contact .content .box:hover a {
-  color: #30fe6c;
+  color: var(--light-green);
 }
 
 #contact .content a ion-icon {
   margin-right: 10px;
 }
 
-
+/* FOOTER */
 footer {
-    padding: 20px 100px;
+  padding: 20px 100px;
 }
 
 footer p {
-    font-size: 1.15rem;
-    text-align: end;
+  font-size: 1.15rem;
+  text-align: end;
 }
 
 footer p a {
-    text-decoration: underline;
-    color: #30fe6c;
+  text-decoration: underline;
+  color: var(--light-green);
 }
